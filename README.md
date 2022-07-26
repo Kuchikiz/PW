@@ -1,3 +1,1 @@
-#busco remedio para cura gay
-#tá
-#só chover e voce falta né comedia?
+tem que ta vendo cambio #100%aprendizado #foda #maromba #frango 
