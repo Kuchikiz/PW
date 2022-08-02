@@ -1,0 +1,20 @@
+Baixar e instalar o composer
+https://getcomposer.org/download/
+----------------------------------------------------
+mkdir nome - cria um diretório
+dir - exibe os arquivos e diretórios
+cd\ - vai para a raíz
+cd nome - acessa o diretório com o nome específico
+cd.. - volta um diretório
+----------------------------------------------------
+Para criar um projeto com o laravel
+composer create-project laravel/laravel nome-projeto
+
+----------------------------------------------------
+code . (abre o vsc com o projeto do diretório
+----------------------------------------------------
+Para executar o projeto laravel
+php artisan serve
+
+No navegador
+localhost:8000
