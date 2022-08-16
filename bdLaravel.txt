@@ -1,0 +1,41 @@
+create database bdLaravel;
+use bdLaravel;
+
+create table tbCliente(
+idCliente int PRIMARY KEY AUTO_INCREMENT,
+nome varchar(60),
+dataNasc date,
+genero varchar(40),
+estadoCivil varchar(40),
+endereco varchar (200),
+numero int,
+complemento varchar(40),
+cep varchar(40),
+bairro varchar(40),
+cidade varchar(40),
+estado varchar(40),
+cpf int (11),
+rg varchar(20),
+fone int (10),
+celular int (11),
+email varchar(40)
+);
+
+create table tbCategoria(
+idcategoria int PRIMARY_KEY,
+categoria varchar(40)
+);
+
+create table tbProduto(
+idproduto int PRIMARY_KEY,
+idcategoria int,
+produto varchar(60),
+valor float(10),
+FOREIGN key (idcategoria) REFERENCES tbCategoria(idcategoria)
+);
+
+create table tbPedido(
+idpedido int PRIMARY_KEY,
+data date, 
+rastrear int (60)
+);
