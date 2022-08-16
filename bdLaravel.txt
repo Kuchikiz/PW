@@ -22,12 +22,12 @@ email varchar(40)
 );
 
 create table tbCategoria(
-idcategoria int PRIMARY_KEY,
+idcategoria int PRIMARY KEY,
 categoria varchar(40)
 );
 
 create table tbProduto(
-idproduto int PRIMARY_KEY,
+idproduto int PRIMARY KEY,
 idcategoria int,
 produto varchar(60),
 valor float(10),
@@ -35,7 +35,7 @@ FOREIGN key (idcategoria) REFERENCES tbCategoria(idcategoria)
 );
 
 create table tbPedido(
-idpedido int PRIMARY_KEY,
+idpedido int PRIMARY KEY,
 data date, 
 rastrear int (60)
 );
