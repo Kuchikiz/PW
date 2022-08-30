@@ -1,0 +1,75 @@
+bdaulalaravel
+
+create table tbProfissional(
+	idProf int primary key AUTO_INCREMENT,
+    nomeProf varchar(40),
+    emailProf varchar(40)
+);
+
+create table tbContato(
+	idContato int PRIMARY key AUTO_INCREMENT,
+    nome varchar(40),
+    email varchar(40),
+    fone varchar(40),
+    assunto varchar(40),   
+    mensagem varchar(500)
+);
+
+insert into tbprofissional values(null,'ana','ana@gmail.com');
+
+insert into tbcontato values(
+	null,
+    'Ana',
+  	'ana@gmail.com',
+    '1199999-9999',
+    'Assunto ana',    
+    'msg ana'
+);
+
+insert into tbcontato values(
+	null,
+    'Maria',
+  	'maria@gmail.com',
+    '1199999-9999',
+    'Assunto maria',    
+    'msg maria'
+);
+
+insert into tbcontato values(
+	null,
+    'Bruno',
+  	'bruno@gmail.com',
+    '1199999-9999',
+    'Assunto bruno',    
+    'msg bruno'
+);
+
+php artisan make:model ProfissionalModel
+php artisan make:model ContatoModel
+
+php artisan make:controller ProfissionalController --resource
+php artisan make:controller ContatoController --resource
+
+Exemplo de rota
+Route::get('/contato','ContatoController@index');
+
+dentro da classe do model
+protected $table = "tbContato"; //nome da tabela a var deve ter o nome $table
+
+dentro do controller
+antes da classe
+use App\ContatoModel;
+
+
+código do método index
+
+ $contatos = ContatoModel::all();
+        foreach($contatos as $c){
+            echo "Id ". $c->idContato . "<br />";            
+            echo "Nome ".$c->nome . "<br />"; 
+            echo "E-mail ".$c->email . "<br />"; 
+            echo "Fone ".$c->fone . "<br />";  
+            echo "Assunto ".$c->assunto . "<br />";  
+            echo "Mensagem".$c->mensagem . "<br />"; 
+            echo "<br />"; 
+        }
