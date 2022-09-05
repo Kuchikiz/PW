@@ -22,7 +22,7 @@ email varchar(40)
 );
 
 create table tbCategoria(
-idcategoria int PRIMARY KEY,
+idcategoria int PRIMARY KEY AUTO_INCREMENT,
 categoria varchar(40)
 );
 
