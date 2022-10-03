@@ -28,14 +28,12 @@ categoria varchar(40)
 
 create table tbProduto(
 idproduto int PRIMARY KEY AUTO_INCREMENT,
-idcategoria int,
 produto varchar(60),
-valor float(10),
-FOREIGN key (idcategoria) REFERENCES tbCategoria(idcategoria)
+valor float(10)
 );
 
 create table tbPedido(
 idpedido int PRIMARY KEY AUTO_INCREMENT,
 data date, 
-rastrear int (60)
+rastrear int
 );
